@@ -1,8 +1,13 @@
 import React from "react";
+import NumberKey from "NumberKey";
 import "./App.css";
 
-function App() {
-  return <></>;
-}
+const App = () => {
+  return (
+    <>
+      <NumberKey number={1} />
+    </>
+  );
+};
 
 export default App;
