@@ -7,9 +7,9 @@ type KeyProps = {
 };
 
 const DotKey = (props: KeyProps): JSX.Element => {
-  const operators = ["+", "-"];
+  const operators = ["+", "-", "×", "÷"];
   const inputLastCharacter = props.input[props.input.length - 1];
-  const numbers = props.input.split(/(?=[+-])/);
+  const numbers = props.input.split(/(?=[+-×÷])/);
   const actionInput = () => {
     if (props.input === "" || operators.includes(inputLastCharacter)) {
       // inputが空、もしくはinputの最後の文字が演算子の場合、returnする
