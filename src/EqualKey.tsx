@@ -21,11 +21,12 @@ const EqualKey = (props: KeyProps): JSX.Element => {
 
   const actionInput = () => {
     const operators = ["+", "-"];
-    if (operators.includes(props.input[props.input.length - 1])) {
-      return;
-    } else if (props.input[props.input.length - 1] === ".") {
+    const inputLastCharacter = props.input[props.input.length - 1];
+    if (operators.includes(inputLastCharacter) || inputLastCharacter === ".") {
+      // inputの最後の文字が演算子もしくは.だった場合、returnする
       return;
     }
+    // 計算結果をinputにセットする
     const result = calculate();
     props.setInput(String(result));
   };

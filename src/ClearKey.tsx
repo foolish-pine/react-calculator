@@ -9,6 +9,7 @@ type KeyProps = {
 
 const Key = (props: KeyProps): JSX.Element => {
   const actionInput = () => {
+    // inputをクリアする
     props.setInput("");
   };
 

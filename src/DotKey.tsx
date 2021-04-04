@@ -8,15 +8,17 @@ type KeyProps = {
 
 const DotKey = (props: KeyProps): JSX.Element => {
   const operators = ["+", "-"];
-  const numbers = props.input.split(/[+-]/);
+  const inputLastCharacter = props.input[props.input.length - 1];
+  const numbers = props.input.split(/(?=[+-])/);
   const actionInput = () => {
-    if (props.input[props.input.length - 1] === ".") {
-      return;
-    } else if (operators.includes(props.input[props.input.length - 1])) {
+    if (props.input === "" || operators.includes(inputLastCharacter)) {
+      // inputが空、もしくはinputの最後の文字が演算子の場合、returnする
       return;
     } else if (numbers[numbers.length - 1].indexOf(".") !== -1) {
+      // inputに含まれる数字のうち、最後の数字に.が含まれる場合、returnする
       return;
     } else {
+      // 末尾に.を加える
       props.setInput(props.input + ".");
     }
   };

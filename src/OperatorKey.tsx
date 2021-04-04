@@ -9,15 +9,16 @@ type KeyProps = {
 
 const OperatorKey = (props: KeyProps): JSX.Element => {
   const operators = ["+", "-"];
+  const inputLastCharacter = props.input[props.input.length - 1];
   const actionInput = () => {
-    if (
-      props.input[props.input.length - 1] === props.character ||
-      props.input[props.input.length - 1] === "."
-    ) {
+    if (inputLastCharacter === ".") {
+      // inputの最後の文字が.だった場合、returnする
       return;
-    } else if (operators.includes(props.input[props.input.length - 1])) {
+    } else if (operators.includes(inputLastCharacter)) {
+      // inputの最後の文字が演算子だった場合、その演算子をクリックした演算子に置換する
       props.setInput(props.input.slice(0, -1) + props.character);
     } else {
+      // 末尾に演算子を加える
       props.setInput(props.input + props.character);
     }
   };
