@@ -12,7 +12,7 @@ const EqualKey = (props: KeyProps): JSX.Element => {
   // 計算処理
   const calculate = () => {
     return props.input
-      .split(/(?=[+-])/)
+      .split(/(?=\+|(?<!÷)-)/)
       .map((block) => {
         // inputを+もしくは-ごとに分割する
         if (block.indexOf("×") !== -1 || block.indexOf("÷") !== -1) {
