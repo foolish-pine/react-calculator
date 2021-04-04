@@ -3,6 +3,7 @@ import Key from "./Key";
 import ZeroKey from "./ZeroKey";
 import DotKey from "./DotKey";
 import OperatorKey from "./OperatorKey";
+import DelKey from "./DelKey";
 import ClearKey from "./ClearKey";
 import EqualKey from "./EqualKey";
 import "./App.css";
@@ -16,10 +17,15 @@ const App = (): JSX.Element => {
         <input className="display" type="text" value={input} disabled />
         <div className="key-rows">
           <div className="key-row">
+            <ClearKey character={"AC"} input={input} setInput={setInput} />
+            <DelKey character={"Del"} input={input} setInput={setInput} />
+            <OperatorKey character={"÷"} input={input} setInput={setInput} />
+          </div>
+          <div className="key-row">
             <Key character={"7"} input={input} setInput={setInput} />
             <Key character={"8"} input={input} setInput={setInput} />
             <Key character={"9"} input={input} setInput={setInput} />
-            <ClearKey character={"C"} input={input} setInput={setInput} />
+            <OperatorKey character={"×"} input={input} setInput={setInput} />
           </div>
           <div className="key-row">
             <Key character={"4"} input={input} setInput={setInput} />

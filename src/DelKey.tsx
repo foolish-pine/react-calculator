@@ -7,19 +7,19 @@ type KeyProps = {
   setInput: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const Key = (props: KeyProps): JSX.Element => {
+const DelKey = (props: KeyProps): JSX.Element => {
   const actionInput = () => {
-    // inputをクリアする
-    props.setInput("");
+    // inputの最後の文字を削除する
+    props.setInput(props.input.slice(0, -1));
   };
 
   return (
     <>
-      <button className="key key-wide" onClick={() => actionInput()}>
+      <button className="key" onClick={() => actionInput()}>
         {props.character}
       </button>
     </>
   );
 };
 
-export default Key;
+export default DelKey;
