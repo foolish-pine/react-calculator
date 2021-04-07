@@ -8,13 +8,13 @@ type KeyProps = {
 
 const ZeroKey = (props: KeyProps): JSX.Element => {
   const actionInput = () => {
-    const numbers = props.input.split(/(?=[+-×÷])/);
+    const numbers = props.input.split(/(?=[+\-×÷])/);
     if (
       numbers[numbers.length - 1] === "0" ||
       numbers[numbers.length - 1] === "+0" ||
       numbers[numbers.length - 1] === "-0"
     ) {
-      // inputに含まれる数字のうち、最後の数字が0の場合、returnする
+      // inputに含まれる数字のうち、最後の数字の最上位が0の場合、returnする
       return;
     }
     props.setInput(props.input + "0");

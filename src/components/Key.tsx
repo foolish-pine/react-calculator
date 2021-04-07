@@ -9,7 +9,7 @@ type KeyProps = {
 
 const Key = (props: KeyProps): JSX.Element => {
   const actionInput = () => {
-    const numbers = props.input.split(/(?=[+-×÷])/);
+    const numbers = props.input.split(/(?=[+\-×÷])/);
     if (
       numbers[numbers.length - 1] === "0" ||
       numbers[numbers.length - 1] === "+0" ||
