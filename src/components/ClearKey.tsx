@@ -1,13 +1,13 @@
 import React from "react";
 import "../styles/App.css";
 
-type KeyProps = {
+type ClearKeyProps = {
   character: string;
   input: string;
   setInput: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const Key = (props: KeyProps): JSX.Element => {
+const ClearKey = (props: ClearKeyProps): JSX.Element => {
   const actionInput = () => {
     // inputをクリアする
     props.setInput("");
@@ -22,4 +22,4 @@ const Key = (props: KeyProps): JSX.Element => {
   );
 };
 
-export default Key;
+export default ClearKey;
