@@ -3,7 +3,6 @@ import BigNumber from "bignumber.js";
 import "../styles/App.css";
 
 type KeyProps = {
-  character: string;
   input: string;
   setInput: React.Dispatch<React.SetStateAction<string>>;
 };
@@ -52,7 +51,7 @@ const EqualKey = (props: KeyProps): JSX.Element => {
   return (
     <>
       <button className="key" onClick={() => actionInput()}>
-        {props.character}
+        =
       </button>
     </>
   );

@@ -42,7 +42,7 @@ const App = (): JSX.Element => {
           <div className="key-row">
             <ZeroKey input={input} setInput={setInput} />
             <DotKey input={input} setInput={setInput} />
-            <EqualKey character={"="} input={input} setInput={setInput} />
+            <EqualKey input={input} setInput={setInput} />
           </div>
         </div>
       </div>
