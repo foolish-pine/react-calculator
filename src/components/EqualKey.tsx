@@ -1,6 +1,6 @@
 import React from "react";
 import BigNumber from "bignumber.js";
-import "../App.css";
+import "../styles/App.css";
 
 type KeyProps = {
   character: string;

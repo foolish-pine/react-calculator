@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Key from "./components/Key";
-import ZeroKey from "./components/ZeroKey";
-import DotKey from "./components/DotKey";
-import OperatorKey from "./components/OperatorKey";
-import DelKey from "./components/DelKey";
-import ClearKey from "./components/ClearKey";
-import EqualKey from "./components/EqualKey";
-import "./App.css";
+import Key from "./Key";
+import ZeroKey from "./ZeroKey";
+import DotKey from "./DotKey";
+import OperatorKey from "./OperatorKey";
+import DelKey from "./DelKey";
+import ClearKey from "./ClearKey";
+import EqualKey from "./EqualKey";
+import "../styles/App.css";
 
 const App = (): JSX.Element => {
   const [input, setInput] = useState("");
