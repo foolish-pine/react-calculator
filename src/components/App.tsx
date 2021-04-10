@@ -13,6 +13,7 @@ const App = (): JSX.Element => {
 
   return (
     <>
+      <header className="header">React Calculator</header>
       <div className="container">
         <input className="display" type="text" value={input} disabled />
         <div className="key-rows">
