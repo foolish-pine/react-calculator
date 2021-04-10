@@ -10,7 +10,7 @@ type KeyProps = {
 const DelKey = (props: KeyProps): JSX.Element => {
   const actionInput = () => {
     // inputの最後の文字を削除する
-    props.setInput(props.input.slice(0, -1));
+    props.setInput((input) => input.slice(0, -1));
   };
 
   return (

@@ -17,7 +17,7 @@ const ZeroKey = (props: KeyProps): JSX.Element => {
       // inputに含まれる数字のうち、最後の数字の最上位が0の場合、returnする
       return;
     }
-    props.setInput(props.input + "0");
+    props.setInput((input) => input + "0");
   };
 
   return (

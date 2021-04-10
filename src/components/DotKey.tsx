@@ -19,7 +19,7 @@ const DotKey = (props: KeyProps): JSX.Element => {
       return;
     } else {
       // 末尾に.を加える
-      props.setInput(props.input + ".");
+      props.setInput((input) => input + ".");
     }
   };
 

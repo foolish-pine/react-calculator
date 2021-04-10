@@ -25,7 +25,7 @@ const OperatorKey = (props: KeyProps): JSX.Element => {
       return;
     } else {
       // 末尾に演算子を加える
-      props.setInput(props.input + props.character);
+      props.setInput((input) => input + props.character);
     }
   };
 

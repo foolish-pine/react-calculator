@@ -18,7 +18,7 @@ const Key = (props: KeyProps): JSX.Element => {
       // inputに含まれる数字のうち、最後の数字が0の場合、returnする
       return;
     }
-    props.setInput(props.input + props.character);
+    props.setInput((input) => input + props.character);
   };
 
   return (
