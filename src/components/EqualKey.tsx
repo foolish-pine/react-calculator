@@ -39,8 +39,12 @@ const EqualKey = (props: KeyProps): JSX.Element => {
   const actionInput = () => {
     const operators = ["+", "-", "×", "÷"];
     const inputLastCharacter = props.input[props.input.length - 1];
-    if (operators.includes(inputLastCharacter) || inputLastCharacter === ".") {
-      // inputの最後の文字が演算子もしくは.だった場合、returnする
+    if (
+      props.input === "" ||
+      operators.includes(inputLastCharacter) ||
+      inputLastCharacter === "."
+    ) {
+      // inputが空もしくはinputの最後の文字が演算子もしくは.だった場合、returnする
       return;
     }
     // 計算結果をinputにセットする
