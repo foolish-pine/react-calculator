@@ -14,8 +14,8 @@
 }
 
 .container {
-  margin-top: 36px;
-  margin-left: 36px;
+  width: 200px;
+  margin: 36px auto 0;
 }
 
 .display {
@@ -25,6 +25,7 @@
   padding: 0 8px;
   font-size: 24px;
   line-height: 50px;
+  color: #000;
   text-align: right;
   border: 1px solid #333;
 }
