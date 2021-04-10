@@ -1,11 +1,9 @@
 {
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "cSpell.words": [
-    "bignumber",
-    "ttfb"
-  ]
+  "cSpell.words": ["bignumber", "ttfb"]
 }
