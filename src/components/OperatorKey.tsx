@@ -12,7 +12,7 @@ const OperatorKey = (props: KeyProps): JSX.Element => {
   const inputLastCharacter = props.input[props.input.length - 1];
   const actionInput = () => {
     if (props.input === "" || inputLastCharacter === ".") {
-      // inputの最後の文字が.だった場合、returnする
+      // inputが空もしくはinputの最後の文字が.だった場合、returnする
       return;
     } else if (
       operators.includes(inputLastCharacter) &&
